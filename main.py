@@ -45,10 +45,10 @@ class WebCrawler:
 
 def main():
     crawler = WebCrawler()
-    start_url = "https://example.com"
+    start_url = "https://www.msit.ac.in"
     crawler.craw(start_url)
 
-    keyword = "test"
+    keyword = "vemuri"
     results = crawler.search(keyword)
     crawler.print_results(results)
 
