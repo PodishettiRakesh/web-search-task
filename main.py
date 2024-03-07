@@ -31,7 +31,7 @@ class WebCrawler:
     def search(self, keyword):
         results = []
         for url, text in self.index.items():
-            if keyword.lower() not in text.lower():
+            if keyword.lower() in text.lower(): #changed to search for the keyword
                 results.append(url)
         return results
 
@@ -45,8 +45,9 @@ class WebCrawler:
 
 def main():
     crawler = WebCrawler()
-    start_url = "https://www.msit.ac.in"
-    crawler.craw(start_url)
+    start_url = "https://example.com"
+    crawler.crawl(start_url)
+
 
     keyword = "vemuri"
     results = crawler.search(keyword)
